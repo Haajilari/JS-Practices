@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number24</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.24:</b> Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.</p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	<input type="text" id="txt" placeholder="Enter Your Favourite Text">	
+	<input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 20px;">
+		
+		<pre id="demo"></pre>
+		
+	</div>
+	
+	<script>
+	
+		function generate(){
+			var str = document.getElementById('txt').value;
+			var _1= str.substring(0,1);
+			document.getElementById('demo').innerHTML=
+				"The Result is: " + _1 + str + _1;
+		}
+	
+	</script>
+</body>
+</html>

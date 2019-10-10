@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number33</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.33:</b> Write a JavaScript program to check if two numbers are in range 40..60 or in the range 70..100 inclusive.</p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter First Number"><br>
+	  <input type="number" id="num2" placeholder="Enter Second Number" style="margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	
+		function generate(){
+			var a = + document.getElementById('num1').value;
+			var b = + document.getElementById('num2').value;
+			
+			if ((  ( a <= 60 && a >= 40) || ( a <= 100 && a >=70))
+				&&
+				((b <= 60 && b >= 40) || ( b >= 70 && b <=100 ))) {
+				document.getElementById('demo').innerHTML=
+					"Numbers are in range";
+			}
+		 else {
+			document.getElementById('demo').innerHTML=
+				"At least one of them is not in range";
+		}
+		}
+	
+	</script>
+	
+</body>
+</html>

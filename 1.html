@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number1</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+
+	 <p> <b> No.1:</b>  Write a JavaScript program to display the current day and time in the following format: <br>
+	  <b> Sample Output:</b> <br>
+		 Today is : Tuesday.<br>
+ 	     Current time is : 10 PM : 30 : 38 </p> 
+	
+	<p> <b> Solution :</b></p>
+	<p id="demo1"> </p>
+	<p id="demo2"> </p>
+	
+	<script>
+	var today = new Date();
+	  var day = today.getDay();
+	  var daylist= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		
+		document.getElementById("demo1").innerHTML="Today is: " + daylist[day] + ".";
+		
+		var hour= today.getHours();
+	  var minute= today.getMinutes();
+	  var second= today.getSeconds();
+	  var prepand ;
+		
+		if (hour>12) {
+			 hour-=12;
+			 prepand= "PM";
+		}
+		else {
+			 prepand= "PM";
+		}
+		
+		if (minute<10) {
+			minute= "0" + minute;
+		}
+		
+		if (second<10){
+			second= "0"+ second;
+		}
+		
+		
+		
+		
+		document.getElementById("demo2").innerHTML="The Time is: " + hour + " " + prepand +" : " + minute + " : " + second;
+		
+	  
+		
+	
+	</script>
+</body>
+</html>

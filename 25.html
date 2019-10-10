@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number25</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.25:</b> Write a JavaScript program check if a given positive number is a multiple of 3 or a multiple of 7.</p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	<input type="number" id="num1" placeholder="Enter Your Favourite Text">	
+	<input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 20px;">
+		
+		<pre id="demo"></pre>
+		
+	</div>
+	
+	<script>
+	
+		function generate() {
+			var num = + document.getElementById('num1').value;
+			var mlt3 = num % 3;
+			var mlt7 = num % 7;
+			
+			if ( mlt3 == 0 || mlt7 == 0) {
+				document.getElementById('demo').innerHTML=
+					"The Number You Entered is Multiple of 3 or 7"
+			}
+			else {
+				document.getElementById('demo').innerHTML=
+					"Attention: The Number You Enterd isn`t multiple of 3 nor 7"
+			}
+		}
+	
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number15</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.10:</b>Write a JavaScript program to calculate multiplication and division of two numbers (input from user).   <br></p>
+	
+	<p> <b> Solution :</b></p>
+	<pre> Enter A Number And Tap Generate!</pre>
+	<input type="number" id="num1" placeholder="Enter a Number">
+	<input type="button" onClick="generate()" name="gener" value="Generate!">
+	<p id="demo"></p>
+	<script>
+	
+		function generate(){
+			var a = document.getElementById('num1').value;
+			if (a>13) {
+				var b=(a-13)*2;
+				document.getElementById('demo').innerHTML="the Result is " + b;
+			}
+			else {
+				document.getElementById('demo').innerHTML= "Unfortunately The Value is Under 13";
+			}
+		}
+	
+	</script>
+	
+	
+</body>
+</html>

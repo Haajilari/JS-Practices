@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number26</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.25:</b> Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more.</p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	<input type="text" id="txt" placeholder="Enter Your Favourite Text">	
+	<input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 20px;">
+		
+		<pre id="demo"></pre>
+		
+	</div> 
+	
+	<script>
+	function generate(){
+			var str = document.getElementById('txt').value;
+			var _1 = str.substring(0,3);
+			var lng = str.length;
+		
+		if (lng >= 3){
+			document.getElementById('demo').innerHTML=
+				"The Result is: " + _1 + str + _1;
+		} else {
+			document.getElementById('demo').innerHTML=
+				"ARE YOU KIDDING ME ?????? :|"
+		}
+	}
+	</script>
+</body>
+</html>

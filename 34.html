@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number34</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.33:</b> Write a JavaScript program to find the larger number from the two given positive integers, the two numbers are in the range 40..60 inclusive.</p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter First Number"><br>
+	  <input type="number" id="num2" placeholder="Enter Second Number" style="margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate(){
+		var a = + document.getElementById('num1').value;
+		var b = + document.getElementById("num2").value;
+		
+		  if ((a >= 40 && a <= 60) && ( b >= 40 && a <= 60)) {
+			  if ( a > b ) {
+				  document.getElementById('demo').innerHTML=
+					  "Numbers are in range and the largest is " + a ;
+			  }
+			  else if ( a == b ) {
+				  document.getElementById('demo').innerHTML=
+					  "Numbers are in range but they are equal => " + a + " = " + b ;
+			  } else {
+				  document.getElementById('demo').innerHTML=
+					  "Numbers are in range and the largest is " + b;
+			  }
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "At least one number is not in range";
+		  }
+	}
+	</script>
+	
+</body>
+</html>

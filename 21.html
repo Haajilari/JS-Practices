@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prblem Number20</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.20:</b>Write a JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string. </p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: 100px;">
+	<input type="text" id="txt" placeholder="Enter Your Favourite Text">
+	<input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 20px;">
+		
+		<pre id="demo"></pre>
+		
+	</div>
+	
+	<script>
+	function generate() {
+	  var a = document.getElementById('txt').value;
+		
+		
+		if ( a === null || a === undefined || a.substring(0,2) === "Py" ) {
+			document.getElementById('demo').innerHTML= a;
+		} else {
+			document.getElementById('demo').innerHTML=
+				"Py" + a;
+		}
+		
+	}
+	
+	</script>
+	
+</body>
+</html>

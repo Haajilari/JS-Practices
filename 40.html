@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prob;em Number40</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.40:</b> Write a JavaScript program to check from two given integers if either one is 8 or their sum or difference is 8. </p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter First Number"><br>
+	  <input type="number" id="num2" placeholder="Enter Second Number" style="margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	 function generate() {
+		 var n1 = + document.getElementById('num1').value;
+		 var n2 = + document.getElementById('num2').value;
+		 var sum = n1 + n2 ;
+		 var dif = Math.abs(n1-n2);
+		 if (n1 == 8 || n2 == 8 || sum == 8 || dif == 8 ) {
+			 document.getElementById('demo').innerHTML=
+				 Boolean(1)
+		 } else {
+			 document.getElementById('demo').innerHTML=
+				 Boolean(0)
+		 }
+	 }
+	
+	</script>
+	
+</body>
+</html>

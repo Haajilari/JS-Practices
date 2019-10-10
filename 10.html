@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number10</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.10:</b>Write a JavaScript program to calculate multiplication and division of two numbers (input from user).   <br></p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px solid rgba(0,39,75,1.00); width: 200px; background-color:aquamarine"> 
+	<input style=" margin: 10px" type="number" id="first" placeholder="Enter First Number"> <br>
+	<input style=" margin: 10px" type="number" id="second" placeholder="Enter Second Number"> <br>
+	
+		<input type="button" onClick="zarb()" style=" margin: 10px " value="Myltiply">
+		<input type="button" onClick="taqsim()" style=" margin: 10px " value="Division">
+	       <p id="demo1" style="margin-left: 10px"></p>
+		   
+		</div>
+	
+	<script>
+		
+		
+	function zarb() {
+		var a = document.getElementById('first').value;
+		var b = document.getElementById('second').value;
+		var c = a * b ;
+		document.getElementById('demo1').innerHTML="Result is: <br>" + c ;
+	}
+		function taqsim() {
+		var a = document.getElementById('first').value;
+		var b = document.getElementById('second').value;
+		var d = a/b ;
+		document.getElementById('demo1').innerHTML="Result is: <br>" + d ;
+		}
+		
+		
+		
+	
+	</script>
+	
+</body>
+</html>

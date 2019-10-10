@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+    <h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.20:</b>Write a JavaScript program to check from two given integers, if one is positive and one is negative.</p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: 100px;">
+	<input type="number" id="num1" placeholder="Enter a Number1">
+	<input type="number" id="num2" placeholder="Enter a Number2"> <br>
+	<input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 20px;">
+		
+		<pre id="demo"></pre>
+		
+	</div>
+	  
+	<script>
+	function generate () {
+		var a = + document.getElementById('num1').value;
+		var b = + document.getElementById('num2').value;
+		
+		if ( (a < 0 && b > 0) || ( a > 0 && b < 0) ) {
+			document.getElementById('demo').innerHTML=
+				"True";
+		} else {
+			document.getElementById('demo').innerHTML=
+				"False";
+		}	
+	}
+	
+	</script>
+</body>
+</html>

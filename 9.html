@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number9</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.9:</b>Write a JavaScript program to calculate days left until next Christmas.   <br></p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<p id="demo"></p>
+	
+	<script>
+		
+	
+today = new Date();
+	var cmas = new Date (today.getFullYear(), 11, 25);
+		
+		if (today.getMonth() == 11 && today.getDate() >25) {
+			cmas.setFullYear(cmas.getFullYear()+1);
+		}
+		var _1day=1000*60*60*24;
+		var to_cmas = Math.ceil((cmas.getTime() - today.getTime())/(_1day));
+		document.getElementById('demo').innerHTML= to_cmas + " Days to Christmas";
+	
+	</script>
+	
+	
+</body>
+</html>

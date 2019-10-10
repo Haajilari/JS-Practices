@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number 17</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.17:</b>Write a JavaScript program to compute the absolute difference between a specified number and 19.
+		Returns triple their absolute difference if the specified number is greater than 19.<br></p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 500px; height:auto;">
+		
+	<input type="number" id="num1" placeholder="Enter The Number">	
+	<input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-left: 30px">
+		
+		<pre id="demo"></pre>
+		
+	</div>
+	
+	<script>
+	
+		function generate () {
+			var a = + document.getElementById('num1').value;
+			
+			if ( a > 19) {
+				var b = ( a - 19 ) * 3
+				document.getElementById('demo').innerHTML=
+					"The Number is Greater Than 19 and Triple the difference is: " + b;
+			} else {
+				var c = 19 - a;
+				document.getElementById('demo').innerHTML=
+					"The Number is Lower Than 19 and the difference is: " + c;
+			}
+		}
+	
+	</script>
+	
+</body>
+</html>

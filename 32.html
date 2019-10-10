@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number32</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.32:</b> Write a JavaScript program to find a value which is nearest to 100 from two different given integer values. </p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter First Number"><br>
+	  <input type="number" id="num2" placeholder="Enter Second Number" style="margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	function generate () {
+		var a = + document.getElementById('num1').value;
+		var b = + document.getElementById('num2').value;
+		var a_100 = Math.abs(100-a);
+		var b_100 = Math.abs(100-b);
+		
+		if ( a_100 < b_100 ) {
+			document.getElementById('demo').innerHTML=
+				+ a +" is closer to 100";
+		} else if ( a_100 > b_100) {
+			document.getElementById('demo').innerHTML=
+				+ b + " is closer to 100";
+		} else {
+			document.getElementById('demo').innerHTML=
+				"The Numbers are in same distance from 100";
+		}
+	}
+	
+	</script>
+</body>
+</html>

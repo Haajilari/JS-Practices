@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number36</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.36:</b> Write a JavaScript program to check if the last digit of the three given positive integers is same.</p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter First Number"><br>
+	  <input type="number" id="num2" placeholder="Enter Second Number" style="margin-top: 5px;"><br>
+	  <input type="number" id="num3" placeholder="Enter Third Number" style="margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate(){
+		  var n1 =  document.getElementById('num1').value;
+		  var n2 =  document.getElementById('num2').value;
+		  var n3 =  document.getElementById('num3').value;
+		  var l1 = n1.toString().charAt(n1.length - 1);
+		  var l2 = n2.toString().charAt(n2.length - 1);
+		  var l3 = n3.toString().charAt(n3.length - 1);
+		  
+		  if (n1>0 && n2>0 && n3>0) {
+			  if ( l1 == l2 && l1 == l3) {
+				  document.getElementById('demo').innerHTML=
+					  "The last digit of up 3 numbers are the same and it`s " + l1 ;
+			  } else {
+				  document.getElementById('demo').innerHTML=
+					  "At least one last digit of up 3 numbers is different"
+			  }
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "!!! Numbers Must Be Positive !!!"
+		  }
+	  }
+	
+	</script>
+	
+</body>
+</html>

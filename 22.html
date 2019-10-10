@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number22</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.22:</b>Write a JavaScript program to remove a character at the specified position of a given string and return the new string. </p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	<input type="text" id="txt" placeholder="Enter Your Favourite Text">
+	<input type="number" id="num1" placeholder="Enter The Position of the Word" style="width: 200px"> <br>	
+	<input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 20px;">
+		
+		<pre id="demo"></pre>
+		
+	</div>
+	
+	<script>
+	function generate() {
+		var str = document.getElementById('txt').value;
+		var pos = + document.getElementById('num1').value;
+		var char_pos = pos - 1;
+		var part1= str.substring(0,char_pos);
+		var part2= str.substring(char_pos + 1, str.length);
+		if (char_pos < str.length) { 
+		document.getElementById('demo').innerHTML=
+			"Given text is: " + str + "<br>" +
+			"The position of the word is: " + pos + "<br>" +
+			"The result after Removing That Char will be: " + part1 + part2;
+		} else {
+			document.getElementById('demo').innerHTML=
+				"The position you want doesn't defined"
+		}
+	}
+	
+	
+	</script>
+	
+	
+</body>
+</html>

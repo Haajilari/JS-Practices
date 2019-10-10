@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number19</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.19:</b>Write a JavaScript program to check a given integer is within 20 of 100 or 400.</p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: 100px;">
+	<input type="number" id="num1" placeholder="Enter a Number">
+	<input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-left: 20px;">
+		
+		<pre id="demo"></pre>
+		
+	</div>
+	
+	<script>
+	  function generate () {
+		  var a = + document.getElementById('num1').value;
+		  if ( Math.abs(a - 100) <=20 || Math.abs(a - 400) <=20) {
+			  document.getElementById('demo').innerHTML=
+				  "True";
+		  } else {
+			  document.getElementById('demo').innerHTML =
+				  "False";
+		  }
+		  
+	  }
+	
+	</script>
+	
+</body>
+</html>

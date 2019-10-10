@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number45</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.45:</b> Write a JavaScript program to check two given integer values and return true if one of the number is 15 or if their sum or difference is 15. </p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter First Number"><br>
+	  <input type="number" id="num2" placeholder="Enter Second Number" style="margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var a = + document.getElementById('num1').value;
+		  var b = + document.getElementById('num2').value;
+		  var sum = a + b;
+		  var dif = + Math.abs(a-b);
+		  
+		  if ( a == 15 || b == 15 || sum == 15 || dif == 15 ) {
+			  document.getElementById('demo').innerHTML=
+				  Boolean(1);
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  Boolean(0);
+		  }
+	  }
+		
+	
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number8</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.8:</b>Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched". <br></p>
+	
+	<p> <b> Solution :</b></p>
+	<p> Right Number Between 1-10: </p>
+	<input type="number" id="user" min="1" max="10">
+	<button onClick="myFunction()"> Click Here!</button>
+	<p id="demo"></p>
+	
+	<script>
+	var x = document.getElementById("user").value;
+	var war;
+	var randi = Math.floor(Math.random()*10) + 1;
+	function myFunction(x){
+		
+
+		if (randi == x){
+			war = "Good Work!";
+		} else {
+			war = "Not Matched Because the Number is " + randi;
+			
+		}
+		
+		alert(war);
+	}
+	
+	</script>
+</body>
+</html>

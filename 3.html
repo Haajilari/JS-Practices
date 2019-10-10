@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number3</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+
+	 <p> <b> No.3:</b>  Write a JavaScript program to get the current date. <br>
+		 <b> Expected Output :</b> <br>
+		 mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy </p>
+
+	<p> <b> Solution :</b></p>
+	
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<p id="demo4"></p>
+	
+	<script>
+	var today= new Date();
+		var day= today.getDate();
+		var month= today.getMonth();
+		var year= today.getFullYear();
+		
+		if (month<10) {
+			month= "0"+month;
+		}
+		if (day<10) {
+			day='0' +day;
+		}
+		
+		document.getElementById("demo1").innerHTML=
+			 month +"-"+day+"-"+year;
+		document.getElementById("demo2").innerHTML=
+			 month +"/"+day+"/"+year;
+		document.getElementById("demo3").innerHTML=
+			 day +"-"+month+"-"+year;
+		document.getElementById("demo4").innerHTML=
+			 day +"/"+month+"/"+year;
+	</script>
+	
+	
+</body>
+</html>
