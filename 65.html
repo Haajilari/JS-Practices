@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number65</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.65:</b> Write a JavaScript program to test if a string end with "Script". The string length must be greater or equal to 6.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt1" placeholder="Enter The  Text You Want to Generate!" style="width: 280px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	function generate() {
+		var txt = document.getElementById('txt1').value;
+		var las6 = txt.substring(txt.length-6, txt.length);
+		if (txt.length>=6) {
+			if (las6.toLowerCase() == "script") {
+				document.getElementById('demo').innerHTML=
+					Boolean(1);
+			} else {
+				document.getElementById('demo').innerHTML=
+					Boolean(0);	
+			}
+		} else {
+			document.getElementById('demo').innerHTML=
+				"Text must has not 6 character or more"
+		}
+	}
+	</script>
+</body>
+</html>

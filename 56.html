@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number56</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.56:</b> Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter Number You Want Devide at" style="width: 220px; margin-top: 5px;"><br>
+	  <input type="number" id="num2" placeholder="Enter Division Value" style="width: 220px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	function generate() {
+		var n1 = + document.getElementById('num1').value;
+		var n2 = + document.getElementById('num2').value;
+		var div = Math.floor(n1/n2).toString();
+		var divspl = div.split('');
+		if ( n1>0 && n2>0){ 
+		for ( i=0 ; i < divspl.length ; i++) {
+			document.getElementById('demo').innerHTML= divspl.join();
+		} 
+		}
+		else {
+			document.getElementById('demo').innerHTML=
+				"Numbers Must be Positive";
+		}
+		
+	}
+	
+	</script>
+	
+</body>
+</html>

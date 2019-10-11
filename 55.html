@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number55</title>
+</head>
+
+<body>
+  <h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.53:</b> Check if a given string contains equal number of p's and t's present</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt" placeholder="Enter The Text You Want to Check" style="width: 250px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var txt = document.getElementById('txt').value;
+		  var splt = txt.toLowerCase().split('');
+		  var ts = 0;
+		  var ps = 0;
+		  for (i=0 ; i<txt.length ; i++) {
+			  if ( splt[i] == 't') {
+				  ts++;
+			  } else if (splt[i] == 'p') {
+				  ps++;
+			  }
+		  }
+		  if (ts == ps) {
+			  document.getElementById('demo').innerHTML=
+				  "The note has equal T and P and there are " + ps + " number of them";
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "There is some difference between number of P and T"
+		  }
+	  }
+	</script>
+	
+</body>
+</html>

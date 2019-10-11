@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Probilem Number46</title>
+</head>
+
+<body>
+	
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.46:</b> Write a JavaScript program to check two given non-negative integers and if one of the number (not both) is multiple of 7 or 11. </p>
+	
+	<p> <b> Solution :</b></p>
+	
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter First Number"><br>
+	  <input type="number" id="num2" placeholder="Enter Second Number" style="margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var a = + document.getElementById('num1').value;
+		  var b = + document.getElementById('num2').value;
+		  var a11 = a % 11 ;
+		  var a7 = a % 7 ;
+		  var b11 = b % 11 ;
+		  var b7 = b % 7 ;
+		  
+		  if (a > 0 && b > 0) { 
+		  if ((a11 == 0 || a7 == 0) &&
+			  (b11 !== 0 && b7 !==0)){
+			  document.getElementById('demo').innerHTML=
+				  "Number " + a + " is multiple of 7 or 11 but number " + b + " isn`t.";
+		  } else if ((b11 == 0 || b7 == 0) &&
+			         (a11 !== 0 && a7 !==0)){
+			  document.getElementById('demo').innerHTML=
+				  "Number " + b + " is multiple of 7 or 11 but number " + a + " isn`t.";
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  " FALSE "
+		  }
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "You have to enter positive integers";
+		  }
+	  }
+	</script>
+	
+</body>
+</html>

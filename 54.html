@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number54</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.54:</b>Write a JavaScript program to check if the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt" placeholder="Enter The Text You Want to Check" style="width: 250px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var txt = document.getElementById('txt').value;
+		  var splt = txt.toLowerCase().split('');
+		  var vows = 0;
+		  for (i=0 ; i<txt.length ; i++) {
+			  if (splt[i] == 'e' || splt[i] == 'a' || splt[i] == 'o' ||
+				  splt[i] == 'u' || splt[i] == 'i') {
+				 vows++;
+			  }
+		  } document.getElementById('demo').innerHTML=
+			 " Number of vowels on this text is: " + vows ;
+	  }
+	</script>
+	
+</body>
+</html>

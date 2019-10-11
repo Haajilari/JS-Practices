@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number59</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.59:</b>Write a JavaScript program to extract the first half of a string of even length.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt" placeholder="Enter The Text You Want to Generate!" style="width: 250px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	function generate() {
+		var txt = document.getElementById('txt').value;
+		var half = Math.floor(txt.length/2);
+		var hftx = txt.substring(0,half);
+		
+		if (txt.length%2 == 0) {
+			document.getElementById('demo').innerHTML=
+				"The result is: <br>" + hftx ;
+		} else{
+			document.getElementById('demo').innerHTML=
+				"Text doesn`t have Even Length :D";
+		}
+	}
+	</script>
+</body>
+</html>

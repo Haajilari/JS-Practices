@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number61</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.61:</b> Write a JavaScript program to concatenate two strings except their first character.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt1" placeholder="Enter The Second Text You Want to Generate!" style="width: 280px; margin-top: 5px;"><br>
+		<input type="text" id="txt2" placeholder="Enter The First Text You Want to Generate!" style="width: 280px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var txt1 = document.getElementById('txt1').value;
+		  var txt2 = document.getElementById('txt2').value;
+		  if (txt1.length > 1 && txt2.length > 1) {
+			  document.getElementById('demo').innerHTML=
+				  "The result is: <br>" +
+				  txt1.substring(1) + " " + txt2.substring(1);
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "At least one text is not standard";
+		  }
+		  
+	  }
+	</script>
+</body>
+</html>

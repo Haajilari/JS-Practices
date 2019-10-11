@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prbolem Number 49 </title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.49:</b> Write a JavaScript program to replace every character in a given string with the character user give.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	     <input type="text" id="txt" placeholder="Type Your Text" style="width: 200px; margin-top: 5px;"><br>
+		 <input type="text" id="alph1" placeholder="Character to be change" style="width: 200px; margin-top: 5px;"><br>
+		 <input type="text" id="alph2" placeholder="Aplhabet to replace" style="width: 200px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	function generate() {
+		var str = document.getElementById('txt').value;
+		var alph1 = document.getElementById('alph1').value;
+		var alph2 = document.getElementById('alph2').value;
+		
+		if (alph1.length==alph2.length && alph1.length < 2) {
+			var regex = new RegExp(alph1, 'g');
+			var re = str.replace(regex, alph2);
+			document.getElementById('demo').innerHTML=
+				"Result of replacing: <br>" + re;
+		} else {
+			document.getElementById('demo').innerHTML=
+				" NO MATCHES ";
+		}
+	}
+		console.log(typeof aplh1)
+	</script>
+</body>
+</html>

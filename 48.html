@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number48</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.48:</b> Write a JavaScript program to reverse a given string. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt" placeholder="Type Your Text" style="width: auto"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	
+		function generate() {
+			/*USE Slpit
+			
+			var str = document.getElementById('txt').value ;
+			var nwst = str.split("").reverse().join("");
+			document.getElementById('demo').innerHTML=
+				"The result of reverse string is: <br>" + nwst;
+		}
+		*/
+		// OR USE LOOP FOR
+		var str = document.getElementById('txt').value;
+		var nwst = "";
+		for (var i = str.length-1 ; i >= 0 ; i--) {
+				nwst += str[i];
+			document.getElementById('demo').innerHTML=
+				nwst;
+		}
+			
+		}
+	</script>
+</body>
+</html>

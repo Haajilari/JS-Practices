@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number62</title>
+</head>
+
+<body>
+ <h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.62:</b> Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt1" placeholder="Enter The  Text You Want to Generate!" style="width: 280px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	 function generate() {
+		 var txt = document.getElementById('txt1').value;
+		 if (txt.length > 2) {
+			 document.getElementById('demo').innerHTML=
+				 "The result is: <br>" +
+				 txt.substring(txt.length-3, txt.length) + txt.substring(0, txt.length-3);
+		 } else {
+			 document.getElementById('demo').innerHTML=
+				 "The length of text is not standard <br>So that we take it back to you:<br>"+
+				 txt;
+		 }
+	 }
+	</script>
+</body>
+</html>

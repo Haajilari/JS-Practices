@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number53</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.53:</b>Write a JavaScript program to check if the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt" placeholder="Enter The Text You Want to Check" style="width: 250px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	function generate() {
+		var str = document.getElementById('txt').value;
+			if ( /a...b/.test(str) || /b...a/.test(str)) {
+				document.getElementById('demo').innerHTML=
+					Boolean(1);
+			} else {
+				document.getElementById('demo').innerHTML=
+					Boolean(0);
+			}
+	}
+	</script>
+	
+</body>
+</html>

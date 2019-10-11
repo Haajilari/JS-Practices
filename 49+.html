@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prbolem Number 49+</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.49+:</b>Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt" placeholder="Type Your Text" style="width: 200px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	function generate(){
+		var str = document.getElementById('txt').value;
+		var s = str.split('');
+		for (i=0; i<=s.length; i++){
+			switch (s[i]) {
+				case  ' ':
+					break;
+				case 'z':
+					s[i]='a';
+					break;
+				case 'Z':
+					s[i]='A';
+					break;
+				default:
+					s[i] = String.fromCharCode(1 + s[i].charCodeAt());
+			}
+			switch (s[i]) {
+				case 'a': case 'e' : case 'i' : case 'o' : case 'u' :
+					s[i] = s[i].toUpperCase();
+					
+			}
+			var nwst = s.join('');
+		document.getElementById('demo').innerHTML=
+	"Result is: <br>" + nwst
+			}
+	}
+		
+	</script>
+</body>
+</html>
