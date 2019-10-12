@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number68</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.68:</b> Write a JavaScript program to create a new string using the first and last n characters from a given sting. The string length must be greater or equal to n.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt" placeholder="Enter The  Text You Want to Generate!" style="width: 280px; margin-top: 5px;"><br>
+		<input type="number" id="num" placeholder="Number of character from first and last!" style="width: 280px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var txt = document.getElementById('txt').value ; 
+		  var num = + document.getElementById('num').value ;
+		  if ( txt.length > num ) {
+			  document.getElementById('demo').innerHTML=
+				  "The result is: <br>" + txt.substring(0,num) +
+				  txt.substring(txt.length-num, txt.length);
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "The String must be in standard shape"
+		  }
+	  }
+	
+	</script>
+	
+	
+</body>
+</html>

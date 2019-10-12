@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number69</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.69:</b> Write a JavaScript program to compute the sum of elements of a given array of integers of length user defined.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+		<input type="number" id="num" placeholder="Numbers of array`s elements!" style="width: 200px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var num = + document.getElementById('num').value;
+		  var arr = [] ;
+		  var sum = + 0 ;
+		  if (num>0) {
+		  for (i=0; i<num; i++) {
+			  arr.push(prompt("Enter the element number " + (i+1)));
+			  arr = arr.map(Number);
+			  sum += arr[i];
+		  } document.getElementById('demo').innerHTML=
+			  "The Array is: <br>[" + arr.join(", ") + "]" +
+			  "<br>The rotated Array: <br>" +
+			  sum;
+			  
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "Dude! Array`s Elements Numbers must be Positive." + typeof(arr)
+		  }
+	  }
+	</script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number76</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.76:</b> Write a JavaScript program to create a new array taking the first and last elements from a given array of integers and length must be greater or equal to 1. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+		<input type="number" id="num1" placeholder="Numbers of Array elements!" style="width: 200px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var num = document.getElementById('num1').value;
+		  var arr = [];
+		  if (num>0) {
+			  for(i=0 ; i<num ; i++) {
+				  arr.push(prompt("Enter Value of Array Element Number" + (i+1)));
+				  arr.map(Number);
+				  var first = arr[0];
+				  var last = arr[arr.length-1];
+			  } document.getElementById('demo').innerHTML=
+				  "The Array You Entered is:<br> [ " + arr.join(", ") + " ]" + "<br>" +
+				  "And the new Array with first and last elements is:<br>[ " + first + ", " + last + " ]"; 
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "Elements cant be in 0 or Negative Value !!"
+		  }
+	  }
+	</script>
+</body>
+</html>

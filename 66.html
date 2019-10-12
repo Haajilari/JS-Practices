@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number66</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise</h2>
+	
+	<p> <b> No.66:</b> Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+	  <input type="text" id="txt1" placeholder="Enter The  Text You Want to Generate!" style="width: 280px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var str = document.getElementById('txt1').value;
+		  var fir3 = str.substring(0,3).toLowerCase();
+		  if ( fir3 == "new" || fir3 == "los") {
+			  document.getElementById('demo').innerHTML=
+				  "Conidition is true and the result is: <br>" + str ;
+		  }else {
+			  document.getElementById('demo').innerHTML=
+				  "The city you enterd doesn`t have Los or New at first";
+		  }
+	  }
+	</script>
+	
+</body>
+</html>
