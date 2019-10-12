@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number85</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.85:</b> Write a JavaScript code to divide an given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+		<input type="number" id="num1" placeholder="Number of Array?" style="width: 200px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate() {
+		  var num = document.getElementById('num1').value;
+		  var arr = [] ;
+		  var par1 = 0 ;
+		  var par2 = 0 ;
+		  if (num>0) {
+			  for ( i=0 ; i<num ; i++){
+				  arr.push(prompt("Enter Element Number" + (i+1)));
+				  arr.map(Number);
+			  }
+				  for (j=0 ; j<num ; j+=2) {
+					  par1 += +arr[j];
+				  } for (k=1 ; k<num ; k+=2) {
+					  par2 += +arr[k];
+				  }
+			  } document.getElementById('demo').innerHTML=
+				  "The array you entered is: <br>[ " + arr.join(' , ') + " ]" +
+				  "<br>And divide it into 2parts result that: <br> [ " + par1 + " , " + par2 +" ]";
+		  }
+	  
+	
+	</script>
+</body>
+</html>

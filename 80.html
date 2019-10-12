@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number80</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.80:</b> Write a JavaScript program to swap the first and last elements of a given array of integers. The array length should be at least 1. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+		<input type="number" id="num1" placeholder="Numbers of Array elements!" style="width: 200px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+		function generate() {
+			var num = + document.getElementById('num1').value;
+			var arr = [];
+			if (num>0) {
+				for ( i=0 ; i<num ; i++){
+					arr.push(prompt("Enteter Element Number" + (i+1)));
+					arr.map(Number);
+						
+					} var temp = arr[0] ;
+							arr[0]= arr[(arr.length-1)] ;
+							arr[arr.length-1] = temp;
+				document.getElementById('demo').innerHTML=
+						"The array after swap is:<br> [ " + arr.join(', ') + " ]"
+				}
+			}
+			
+	
+	
+	</script>
+</body>
+</html>

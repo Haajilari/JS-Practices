@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number84</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.84:</b>Write a JavaScript to replace each character of a given string by the next one in the English alphabet.<br>
+        <strong>Note: </strong>‘a’ will be replace by ‘b’ or ‘z’ would be replaced by ‘a’. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+		<input type="text" id="txt" placeholder="Write Something" style="width: 200px; margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate() {
+		  var str = document.getElementById('txt').value;
+		  var chr = str.toLowerCase().split('');
+		  for ( i=0 ; i<chr.length ; i++) {
+			  var n = chr[i].charCodeAt() - 'a'.charCodeAt();
+			      n = (n+1)%26;
+			      chr[i]= String.fromCharCode(n + 'a'.charCodeAt());
+		  } document.getElementById('demo').innerHTML=
+			  "The String You Entered is:<br>" + str +
+			  "<br>And the new String with shif 1 Alphabeticaly is: <br>" + chr.join('');
+	  }
+	</script>
+	
+</body>
+</html>

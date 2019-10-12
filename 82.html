@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number82</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.82:</b> Write a JavaScript to add two positive integers without carry. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 425px; height: auto;">
+		<input type="number" id="num1" placeholder="Number1" style=" margin-top: 5px;"><br>
+		<input type="number" id="num2" placeholder="Number2" style=" margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate(){
+		  var num1 = + document.getElementById('num1').value;
+		  var num2 = + document.getElementById('num2').value;
+		  var nwsm = 0 ;
+		  var x = 1;
+		  if (num1.toString().length == num2.toString().length){
+		  while (num1>0 && num2>0){
+			  nwsm += x * ((num1+num2)%10);
+			  num1 = Math.floor(num1/10);
+			  num2 = Math.floor(num2/10);
+			  x *= 10 ;
+		  } document.getElementById('demo').innerHTML=
+			  "The result is:<br>" + nwsm;
+	  } else {
+		  document.getElementById('demo').innerHTML=
+			  "Numbers must be in the same length";
+	  }
+	  }
+	
+	</script>
+	
+</body>
+</html>
