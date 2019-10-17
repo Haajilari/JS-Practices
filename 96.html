@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number96</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.96:</b> Write a JavaScript program to compute the sum of absolute differences of consecutive numbers of a given array of integers.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="number" id="num1" placeholder="Number of Array`s Element" style="width: 180px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate() {
+		  var num = + document.getElementById('num1').value;
+		  var arr = [];
+		  var sum = 0 ;
+		  if (num>0) {
+			  for (i=0 ; i<num ; i++){
+				  arr.push(prompt("Enter Number1:" + (i+1)));
+				  arr.map(Number);
+			  }
+			  for (i=0 ; i+1<arr.length ; i++) {
+				  var diff = Math.abs(arr[i] - arr[i+1]);
+				  sum += diff ;
+			  }
+		  } document.getElementById('demo').innerHTML=
+			  "The sum of difference is: <br>" + sum ;
+	  }
+	</script>
+</body>
+</html>

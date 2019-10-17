@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number91</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.91:</b>Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="number" id="num1" placeholder="Number of Array`s Element" style="width: 180px ;margin-top: 5px;"><br>
+		<input type="number" id="num2" placeholder="Number of Consecutive!" style="width: 180px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	  <pre id="demo1"></pre>
+	</div>
+	<script>
+	  function generate() {
+		  var num = + document.getElementById('num1').value;
+		  var k = + document.getElementById('num2').value;
+		  var arr = [];
+          var temp_sum = 0;
+		  var result = 0 ;
+		  if (num>0){
+			  for (i=0 ; i<num ; i++) {
+				  arr.push(prompt("Enter Array`s Element Number" +(i+1)));
+				  arr.map(Number);
+			  }
+			  document.getElementById('demo').innerHTML=
+				  "Array is: [ " + arr.join(' , ') + " ]"
+		  } for ( i=0 ; i<k-1 ; i++) {
+			 temp_sum += arr[i]; 
+		  } for ( i=k-1 ; i<arr.length ; i++) {
+			  temp_sum += arr[i];
+			  if( temp_sum > result ) {
+				  result = temp_sum;
+			  }
+			  temp_sum -= [i-k+1]
+		  }
+		  document.getElementById('demo1').innerHTML=
+			  "Result is:" + result;
+	  }
+		  
+
+	
+	</script>
+</body>
+</html>

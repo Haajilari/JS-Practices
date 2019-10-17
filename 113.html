@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number113</title>
+</head>
+
+<body>
+			<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.113:</b> Write a JavaScript program to calculate the sum n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer.  </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+	  <input type="number" id="num1" placeholder="Factorial !!!" style="width: 240px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Enter Vector`s Element" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>	
+	<script>
+	  function generate() {
+		  var num = + document.getElementById('num1').value;
+		  var sum = 0;
+		  while ( num > 0 ){
+			  sum += num;
+			  num = Math.floor( num / 2);
+		  }
+		  document.getElementById('demo').innerHTML=
+			  "The Result is: " + sum ;
+	  }
+	
+	</script>
+</body>
+</html>

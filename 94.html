@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number94</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.94:</b> Write a JavaScript program to find the number which appears most in a given array of integers.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="number" id="num1" placeholder="Number of Array`s Element" style="width: 180px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate() {
+		  var num = + document.getElementById("num1").value;
+		  var arr = [];
+		  var ctr = [];
+		  var ans = 0;
+		  
+		  if(num>0){
+			  for (i=0 ; i<num ; i++){
+				  arr.push(prompt("Enter Element"+ (i+1)));
+				  arr.map(Number);
+			  }
+		  }
+		  for (i=0 ; i< 1000; i++) {
+			  ctr.push(0);
+	  }
+		  for (i=0 ; i<arr.length ; i++){
+			  ctr[arr[i]-1]++;
+			  if (ctr[arr[i] - 1] > ctr[ans]){
+				  ans = arr[i] - 1;
+			  }
+		  } document.getElementById('demo').innerHTML=
+			  "Inserted array is:<br> [ " + arr.join(' , ') + " ]<br>" +
+			  "And the most repeated number is: " + (ans + 1) ;
+	  }
+	</script>
+</body>
+</html>

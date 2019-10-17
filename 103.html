@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number103</title>
+</head>
+
+<body>
+		<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.103:</b> Write a JavaScript program to find the number of inversions of a given array of integers.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="number" id="num1" placeholder="Write Number To Max Del 1Digit" style="width: 200px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+<script>
+	  function generate() {
+		  var num = + document.getElementById('num1').value;
+		  var num_dig = [];
+		  var result = 0;
+		  while(num){
+			  num_dig.push(num%10);
+			  num = Math.floor(num/10);
+		  }
+		  for ( in_num = 0 ; in_num < num_dig.length ; in_num++){
+			  var n = 0 ;
+			  for(i = num_dig.length - 1 ; i >= 0 ; i--){
+				  if ( i !== in_num){
+					  n = n * 10 + num_dig[i];
+				  }
+			  }
+			 result = Math.max(n, result);
+		  } 
+		  document.getElementById('demo').innerHTML=
+			  "The Maximal Number After Deleting One Digits:<br>" + result ;
+	  }
+	</script>
+</body>
+</html>

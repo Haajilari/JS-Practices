@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number99</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.99:</b>Write a JavaScript program to check whether it is possible to rearrange characters of a given string in such way that it will become equal to another given string.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="text" id="txt1" placeholder="Write Something First" style="width: 200px ;margin-top: 5px;"><br>
+		<input type="text" id="txt2" placeholder="Write Something Sec. to Check" style="width: 200px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate() {
+		  var str1 = document.getElementById('txt1').value;
+		  var str2 = document.getElementById('txt2').value;
+		  var sort1 = str1.toLowerCase().split('').sort();
+		  var sort2 = str2.toLowerCase().split('').sort();
+		  if (str1.length == str2.length){
+			  for ( i=0 ; i<str1.length ; i++){
+				  if (sort1[i] !== sort2[i]){
+					  document.getElementById('demo').innerHTML=
+						  Boolean(0)
+				  } else {
+					  document.getElementById('demo').innerHTML=
+						  Boolean(1);
+				  }
+			  }
+		  }
+		  else {
+			  document.getElementById('demo').innerHTML=
+				  "At least, strings must have the same length";
+		  }
+	  }
+	</script>
+</body>
+</html>

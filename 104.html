@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number104</title>
+</head>
+
+<body>
+			<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.104:</b> Write a JavaScript program to find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="number" id="num1" placeholder="Number Of Array Element" style="width: 200px ;margin-top: 5px;"><br>
+		<input type="number" id="num2" placeholder="Number to Check Difference" style="width: 200px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function generate(){
+		  var numel = + document.getElementById('num1').value;
+		  var num = + document.getElementById('num2').value;
+		  var arr = [] ;
+		  var max_val = -1 ;
+		  for ( i=0 ; i<numel ; i++){
+			  arr.push(prompt("Element Number" + (i+1)));
+			  arr.map(Number);
+		  }
+		  for (i=0 ; i<arr.length ; i++){
+			  for (j=i+1; j<arr.length ; j++){
+				  var x = Math.abs(arr[i] - arr[j]);
+				  if (x<=num){
+					  max_val = Math.max(x, max_val);
+				  }
+			  }
+		  }
+		  document.getElementById('demo').innerHTML=
+			  "The array you inserted is:<br> [ " + arr.join(' , ') + " ]<br>" +
+			  "The number you want check difference below it is: <br>" + num +
+			  "<br>And the absolute difference is:<br>" + max_val ;
+	  }
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number125</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.125:</b>  Write a JavaScript program to get the largest even number from an array of integers. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 550px; height: auto;">
+		<p> Take it :</p>
+		<input type="number" id="num" placeholder="Number Of Elements">
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Generate Matrix" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate(){
+		  var num = + document.getElementById('num').value;
+		  var arr = [];
+		  var even = [];
+		  for ( i = 0 ; i < num ; i++ ) {
+			  arr.push(prompt("Enter Element" + (i+1)));
+			  arr = arr.map(Number);
+		  }
+		  arr.sort((x, y) => x - y );
+		  for ( i = 0 ; i < num ; i++){
+			  if( arr[i] % 2 == 0 ){
+				  document.getElementById('demo').innerHTML=
+					  "The array is:<br>[ " + arr.join(' , ') + " ]" +
+					  "The Largest Even Number is: " + arr[i]
+			  }
+		  }
+		  }
+	</script>
+</body>
+</html>

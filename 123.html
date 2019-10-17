@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number123</title>
+</head>
+
+<body>
+				<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.123:</b> Write a JavaScript program to find if the members of an given array of integers is a permutation of numbers from 1 to a given integer. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 550px; height: auto;">
+		<p> Circles Detail :</p>
+		<input type="number" id="num" placeholder="Number Of Elements">
+		<input type="number" id="num1" placeholder="Specific Element">
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Generate Matrix" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate() {
+		  var num = + document.getElementById('num').value;
+		  var num1 = + document.getElementById('num1').value;
+		  var arr = [] ;
+		  for ( i = 0 ; i < num ; i++){
+			  arr.push(prompt("Enter Element" + (i+1)));
+			  arr = arr.map(Number);
+		  }
+		  for ( i = 0 ; i < num1 ; i++ ) {
+			  if ( arr.indexOf(i+1) < 0 ) {
+				  document.getElementById('demo').innerHTML=
+					  false
+			  } else {
+				  document.getElementById('demo').innerHTML=
+			  		true
+		  }
+	  }
+	  }
+	</script>
+</body>
+</html>

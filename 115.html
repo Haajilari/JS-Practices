@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Numer115</title>
+</head>
+
+<body>
+			<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.115:</b> Write a JavaScript program to check whether a matrix is a diagonal matrix or not. In linear algebra, a diagonal matrix is a matrix in which the entries outside the main diagonal are all zero (the diagonal from the upper left to the lower right). </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+			  <input type="number" id="num" placeholder="Write Something" style="width: 240px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Generate Matrix" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>	
+	<script>
+	function generate(){
+		var num = + document.getElementById('num').value;
+		var matrix =  [];
+		for (var i = 0 ; i < num ; i++){
+			 matrix[i] = [] ;
+			for (var j = 0 ; j < num ; j++){
+				 matrix[i].push(prompt("Enter Element" + (i+1) +""+ (j+1)));
+				 matrix[i] = matrix[i].map(Number);
+			}
+		}
+			for ( var i = 0 ; i < matrix.length ; i++){
+				for ( var j = 0 ; j < matrix.length ; j++){
+					if ( i !== j && matrix[i][j] !== 0){
+						document.getElementById('demo').innerHTML=
+							"The Matrix is:<br>" + matrix.join("<br>") + 
+							"<br>And It`s not Diagonal"
+					}
+					}
+				} 
+						document.getElementById('demo').innerHTML=
+							"The Matrix is: <br>" + matrix.join("<br>") +
+							"<br>And It`s Diagonal!!!!"
+
+		}
+	</script>
+</body>
+</html>

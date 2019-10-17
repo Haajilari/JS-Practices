@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number120</title>
+</head>
+
+<body>
+			<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.120:</b> Write a JavaScript program to check if a given integer has an increasing digits sequence. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 550px; height: auto;">
+		<p> Circles Detail :</p>
+		<input type="number" id="x" placeholder="Enter X as Center">
+	    <input type="number" id="y" placeholder="Enter Y as Center">
+		<input type="number" id="r" placeholder="Enter R as Ratio"><br>
+		<p> Points You Want To Check: </p>
+		<input type="number" id="a" placeholder="Enter A as X">
+	    <input type="number" id="b" placeholder="Enter B as Y"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Generate Matrix" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>	
+	<script>
+	  function generate() {
+		  var x = + document.getElementById('x').value;
+		  var y = + document.getElementById('y').value;
+		  var r = + document.getElementById('r').value;
+		  var a = + document.getElementById('a').value;
+		  var b = + document.getElementById('b').value;
+		  var dist_point = (a-x) * (a-x) + (b-y) * (b-y);
+		  if (r>0){
+			  if( dist_point<r*r){
+				  document.getElementById('demo').innerHTML=
+					  "In Circle"
+			  } else {
+				  document.getElementById('demo').innerHTML=
+					  "Out of Circle"
+			  }
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "R Must be Positive Integer";
+		  }
+	  }
+	</script>
+</body>
+</html>

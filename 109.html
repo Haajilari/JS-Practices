@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number109</title>
+</head>
+
+<body>
+		<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.108:</b> Write a JavaScript program to create the dot products of two given 3D vectors.
+	</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+	  <input type="number" id="num1" placeholder="Enter the Number of Array`s Element" style="width: 240px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Enter Vector`s Element" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate(){
+		  var num = + document.getElementById('num1').value;
+		  var prime_num1 = [] ;
+		  var prime_num2 = [] ;
+		  for ( i = 0 ; i <= num ; i++){
+			  prime_num2.push(true);
+		  }
+		  for ( i = 2 ; i <= num ; i++){
+			  if (prime_num2[i]){
+				  prime_num1.push(i);
+				  for( j = 1 ; i * j <= num ; j++ ){
+					  prime_num2[i*j] = false ;
+				  }
+			  }
+		  }
+		  document.getElementById('demo').innerHTML=
+			  "Prime Numbers are:<br> [ " + prime_num1.join(' , ') + " ]"
+	  }
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number108</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.108:</b> Write a JavaScript program to create the dot products of two given 3D vectors.
+	</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Enter Vector`s Element" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate(){
+		  var vect1 = [];
+		  var vect2 = [];
+		  var res = 0 ;
+		  for ( i = 0 ;  i < 3 ; i++){
+			  vect1.push(prompt("Vector One Element" +(i+1)));
+			  vect1.map(Number);
+		  }
+		  for ( j = 0 ; j < 3 ; j++){
+			  vect2.push(prompt("Vector Two Element" + (j+1)));
+			  vect2.map(Number);
+		  }
+		  for ( i = 0 ; i < 3 ; i++) {
+			 res += vect1[i] * vect2[i] ; 
+		  }
+		  document.getElementById('demo').innerHTML=
+			  "Vector One: [ " + vect1.join(' , ') + " ]<br>" +
+			  "Vector Two: [ " + vect2.join(' , ') + " ]<br>" +
+			  " DOT Product is: " + res
+	  }
+	</script>
+	
+</body>
+</html>

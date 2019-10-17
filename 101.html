@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number101</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.101:</b>Write a JavaScript program to check whether a given string contains only Latin letters and no two uppercase and no two lowercase letters are in adjacent positions.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="text" id="txt" placeholder="Write Something To Check" style="width: 200px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+	<script>
+		function generate() {
+			var str = document.getElementById('txt').value;
+
+  var is_lower_case = function(symbol) {
+    if ('a' <= symbol && symbol <= 'z') {
+      document.getElementById('demo').innerHTML=
+		  "true";
+    } else {
+    document.getElementById('demo').innerHTML= "false";
+		}
+  }
+
+  var is_upper_case = function(symbol) {
+    if ('A' <= symbol && symbol <= 'Z') {
+      document.getElementById('demo').innerHTML= "true";
+    }
+    document.getElementById('demo').innerHTML= "false";
+  }
+
+  var is_first_char_lower = is_lower_case(str[0]),
+    is_first_char_upper = is_upper_case(str[0]);
+
+  if (!(is_first_char_lower || is_first_char_upper)) {
+    document.getElementById('demo').innerHTML= "false";
+  }
+
+  for (var i = 1; i < str.length; i++) {
+    if (i % 2) {
+      if (is_lower_case(str[i]) === is_first_char_lower ||
+        is_upper_case(str[i]) === is_first_char_upper) {
+        document.getElementById('demo').innerHTML= "false";
+      }
+    } else {
+      if (is_lower_case(str[i]) !== is_first_char_lower ||
+        is_upper_case(str[i]) !== is_first_char_upper) {
+        document.getElementById('demo').innerHTML= "false";
+      }
+    }
+  }
+
+  document.getElementById('demo').innerHTML= "true";
+}
+	</script>
+</body>
+</html>

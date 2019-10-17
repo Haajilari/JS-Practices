@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number97</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.98:</b>Write a JavaScript program to switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="text" id="txt" placeholder="Write Something" style="width: 180px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+	<script>
+		function generate() {
+	var str = document.getElementById('txt').value
+	var x = 0 ;
+	var y = 0 ;
+		for ( i = 0 ; i < str.length ; i++) {
+			if ( /[A-Z]/.test(str[i])){
+				x++ ;
+			} else {
+				y++ ;
+			}
+		}
+			if (x>y) {
+				document.getElementById('demo').innerHTML=
+					str.toUpperCase();
+			} else {
+				document.getElementById('demo').innerHTML=
+					str.toLowerCase();
+			}
+		}
+		
+	</script>
+	
+</body>
+</html>

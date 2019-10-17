@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number126</title>
+</head>
+
+<body>
+	<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.126:</b>  Write a JavaScript program to reverse the order of the bits in a given integer. </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 550px; height: auto;">
+		<p> Take it :</p>
+		<input type="number" id="num" placeholder="Number Of Elements">
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Generate Matrix" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>
+	<script>
+	  function generate() {
+		  var num = + document.getElementById('num').value;
+		  var rev = parseInt(num.toString(2).split('').reverse().join(''), 2);
+		  document.getElementById('demo').innerHTML=
+			  "Number You Choose: " + num + "<br>Reverse it as binary result that: " + rev;
+	  }
+	</script>
+</body>
+</html>

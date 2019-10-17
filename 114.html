@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number114</title>
+</head>
+
+<body>
+			<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.114:</b>Write a JavaScript program to check whether a given string represents a correct sentence or not. A string is considered correct sentence if it starts with the capital letter and ends with a full stop (.). </p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+	  <input type="text" id="txt" placeholder="Write Something" style="width: 240px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Tap Here To Generate" style="margin-top: 5px;">
+	  <pre id="demo"></pre>
+	</div>	
+	<script>
+	  function generate() {
+		  var str = document.getElementById('txt').value;
+		  var first = str[0];
+		  var last = str[str.length-1];
+		  if ( /[A-Z]/.test(first) && last == "."){
+			  document.getElementById('demo').innerHTML=
+				  "Correct Sentence";
+		  } else {
+			  document.getElementById('demo').innerHTML=
+				  "Wrong Sentence";
+		  }
+	  }
+	</script>
+</body>
+</html>

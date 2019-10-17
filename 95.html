@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem Number95</title>
+</head>
+
+<body>
+		<h2> JavaScript Excercise </h2>
+	
+	<p> <b> No.95:</b> Write a JavaScript program to replace all the numbers with a specified number of a given array of integers.</p>
+	
+	<p> <b> Solution :</b></p>
+	<div style="border: 1px dashed black; padding: 20px; width: 450px; height: auto;">
+		<input type="number" id="num1" placeholder="Number of Array`s Element" style="width: 180px ;margin-top: 5px;"><br>
+		<input type="number" id="num2" placeholder="Number to change" style="width: 180px ;margin-top: 5px;"><br>
+		<input type="number" id="num3" placeholder="Replaced number" style="width: 180px ;margin-top: 5px;"><br>
+	  <input type="button" onClick="generate()" name="gen" value="Generate!" style="margin-top: 5px;">
+		<pre id="demo"></pre>
+	</div>
+	
+	<script>
+	  function array_element_replace(arr, old_value, new_value) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === old_value) {
+      arr[i] = new_value;
+    }
+  }
+  return arr;
+}
+num = [1, 2, 3, 2, 2, 8, 1, 9];
+console.log(`Original Array: ${num}`);
+console.log(array_element_replace(num, 2, 5));
+	</script>
+</body>
+</html>
